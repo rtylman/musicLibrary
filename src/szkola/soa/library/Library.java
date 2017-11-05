@@ -36,6 +36,7 @@ public class Library {
   }
 
   public void addSampleSongs() {
+
     collection.add(new Song("Please stop the music", "Album", "Rihanna", "3:02", "Pop", 2005));
     collection.add(new Song("aaaaa", "Album2", "Rihanna", "3:02", "Pop", 2008));
     collection.add(new Song("bbbbb", "yeah", "Guns&Roses", "3:02", "Pop", 1980));

@@ -1,0 +1,96 @@
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+    <!--
+     Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.0 (wsit240-7e98ff4; 2017-08-03T21:19:54+0200) JAXWS-RI/2.3.0 JAXWS-API/2.3.0 JAXB-RI/2.3.0 JAXB-API/2.3.0 svn-revision#unknown.
+    -->
+<xs:schema xmlns:tns="http://soa.szkola/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://soa.szkola/">
+  <xs:element name="InvalidInputException" type="tns:InvalidInputException"/>
+  <xs:element name="addSampleSongsToLibrary" type="tns:addSampleSongsToLibrary"/>
+  <xs:element name="addSampleSongsToLibraryResponse" type="tns:addSampleSongsToLibraryResponse"/>
+  <xs:element name="addSongToLibrary" type="tns:addSongToLibrary"/>
+  <xs:element name="addSongToLibraryResponse" type="tns:addSongToLibraryResponse"/>
+  <xs:element name="getAllSongs" type="tns:getAllSongs"/>
+  <xs:element name="getAllSongsResponse" type="tns:getAllSongsResponse"/>
+  <xs:element name="getSongByTitle" type="tns:getSongByTitle"/>
+  <xs:element name="getSongByTitleResponse" type="tns:getSongByTitleResponse"/>
+  <xs:element name="getSongsByArtist" type="tns:getSongsByArtist"/>
+  <xs:element name="getSongsByArtistResponse" type="tns:getSongsByArtistResponse"/>
+  <xs:element name="removeSongByTitle" type="tns:removeSongByTitle"/>
+  <xs:element name="removeSongByTitleResponse" type="tns:removeSongByTitleResponse"/>
+  <xs:complexType name="getSongByTitle">
+    <xs:sequence>
+      <xs:element name="title" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getSongByTitleResponse">
+    <xs:sequence>
+      <xs:element name="song" type="tns:song" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="song">
+    <xs:sequence>
+      <xs:element name="album" type="xs:string" minOccurs="0"/>
+      <xs:element name="artist" type="xs:string" minOccurs="0"/>
+      <xs:element name="genre" type="xs:string" minOccurs="0"/>
+      <xs:element name="length" type="xs:string" minOccurs="0"/>
+      <xs:element name="title" type="xs:string" minOccurs="0"/>
+      <xs:element name="year" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="InvalidInputException">
+    <xs:sequence>
+      <xs:element name="faultInfo" type="xs:string" minOccurs="0"/>
+      <xs:element name="message" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addSongToLibrary">
+    <xs:sequence>
+      <xs:element name="title" type="xs:string" minOccurs="0"/>
+      <xs:element name="album" type="xs:string" minOccurs="0"/>
+      <xs:element name="artist" type="xs:string" minOccurs="0"/>
+      <xs:element name="length" type="xs:string" minOccurs="0"/>
+      <xs:element name="genre" type="xs:string" minOccurs="0"/>
+      <xs:element name="year" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addSongToLibraryResponse">
+    <xs:sequence>
+      <xs:element name="song" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addSampleSongsToLibrary">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="addSampleSongsToLibraryResponse">
+    <xs:sequence>
+      <xs:element name="song" type="tns:song" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="removeSongByTitle">
+    <xs:sequence>
+      <xs:element name="title" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="removeSongByTitleResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getSongsByArtist">
+    <xs:sequence>
+      <xs:element name="artist" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getSongsByArtistResponse">
+    <xs:sequence>
+      <xs:element name="song" type="tns:song" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAllSongs">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="getAllSongsResponse">
+    <xs:sequence>
+      <xs:element name="song" type="tns:song" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -35,6 +35,7 @@ public class LibraryService {
       library.addSong(new Song(title, album, artist, length, genre, year));
       Song song = library.getSongByTitle(title);
       return song.toString();
+
     } else {
 
       throw new InvalidInputException("Invalid input", "Artist or Title can't be empty");
