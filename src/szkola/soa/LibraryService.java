@@ -14,15 +14,15 @@ import java.util.List;
 @WebService
 public class LibraryService {
 
-  Library library = new Library();
+  private Library library = new Library();
 
   @WebMethod
   @WebResult(name = "song")
   public List<Song> addSampleSongsToLibrary() {
 
     library.addSampleSongs();
-    List<Song> songs = library.getAllSongs();
-    return songs;
+
+    return library.getAllSongs();
 
   }
 
@@ -77,8 +77,7 @@ public class LibraryService {
 
     if (!artist.isEmpty()) {
 
-      List<Song> songs = library.getSongsByArtist(artist);
-      return songs;
+      return library.getSongsByArtist(artist);
 
     } else {
 
