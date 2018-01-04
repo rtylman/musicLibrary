@@ -93,9 +93,8 @@ public class LibraryService {
       List<Song> songs = library.removeSongByTitle(title);
       if (songs == null) {
         return "No song found with title: " + title;
-      } else {
-        return "Done";
       }
+      return "Done";
 
     } else {
 
