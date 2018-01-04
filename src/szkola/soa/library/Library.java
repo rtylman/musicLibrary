@@ -54,9 +54,8 @@ public class Library {
     for (Song song : collection) {
       if (song.getTitle().equalsIgnoreCase(title)) {
         collection.remove(song);
-        return collection;
       }
     }
-    return null;
+    return collection;
   }
 }
